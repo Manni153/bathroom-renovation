@@ -413,7 +413,6 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
   box-shadow: var(--shadow-lg); color: #fff;
 }
 .sticky-cta svg { width: 24px; height: 24px; }
-.sticky-cta .call { background: var(--sage); }
 .sticky-cta .whatsapp { background: var(--sage-darker); }
 @media (min-width: 1025px) { .sticky-cta { display: none; } }
 
