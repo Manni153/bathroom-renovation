@@ -310,6 +310,12 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
 .cta-band h2 { color: #fff; margin-bottom: 6px; }
 .cta-band p { color: #DCE3CB; margin: 0; }
 .cta-band__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.cta-band--light { background: var(--sage-tint-2); border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); }
+.cta-band--light h2 { color: var(--ink); font-size: 1.3rem; }
+.cta-band--light p { color: var(--ink-soft); }
+
+/* ---------- Page content (single-column, readable width) ---------- */
+.page-content { max-width: 860px; }
 
 /* ---------- Forms ---------- */
 .form-card { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow); }
