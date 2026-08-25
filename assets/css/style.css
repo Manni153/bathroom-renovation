@@ -119,21 +119,26 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 10px 20px;
   max-width: var(--container);
   margin: 0 auto;
   gap: 16px;
 }
+@media (min-width: 768px) { .site-header__bar { padding: 16px 24px; } }
 .brand {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   color: var(--ink);
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-.brand span { font-family: var(--font-sans); font-weight: 500; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-dark); margin-top: 2px; }
+@media (min-width: 768px) { .brand { font-size: 1.3rem; } }
+.brand span { display: none; font-family: var(--font-sans); font-weight: 500; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-dark); margin-top: 2px; }
+@media (min-width: 768px) { .brand span { display: block; } }
 
 .nav-desktop { display: none; }
 .nav-desktop ul { display: flex; gap: 28px; list-style: none; }
@@ -160,9 +165,21 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .nav-desktop .dropdown-menu a { padding: 8px 10px; border-radius: var(--radius-sm); font-size: 0.9rem; }
 .nav-desktop .dropdown-menu a:hover { background: var(--sage-tint-2); }
 
-.header-cta { display: flex; align-items: center; gap: 14px; }
+.header-cta { display: flex; align-items: center; gap: 12px; }
 .header-phone { display: none; font-weight: 600; font-size: 0.95rem; color: var(--ink); }
 .header-phone small { display: block; font-weight: 400; font-size: 0.72rem; color: var(--ink-muted); }
+
+.header-phone-compact {
+  display: flex; align-items: center; gap: 6px;
+  font-weight: 600; font-size: 0.85rem; color: var(--ink);
+  flex-shrink: 0;
+}
+.header-phone-compact svg { width: 16px; height: 16px; color: var(--sage-dark); flex-shrink: 0; }
+.header-quote-btn { display: none; }
+@media (min-width: 768px) {
+  .header-phone-compact { display: none; }
+  .header-quote-btn { display: inline-flex; }
+}
 
 .nav-toggle {
   background: none; border: 1px solid var(--border); border-radius: var(--radius-sm);
