@@ -266,6 +266,10 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero--wet-room { --hero-img: url('/assets/img/wet-room-mobile.webp'); }
 @media (min-width: 1025px) { .hero--wet-room { --hero-img: url('/assets/img/wet-room-desktop.webp'); } }
 
+/* Walk-in Shower Conversion service hero: same responsive pattern */
+.hero--walk-in-shower { --hero-img: url('/assets/img/walk-in-shower-mobile.webp'); }
+@media (min-width: 1025px) { .hero--walk-in-shower { --hero-img: url('/assets/img/walk-in-shower-desktop.webp'); } }
+
 /* ---------- Trust strip ---------- */
 .trust-strip { display: grid; grid-template-columns: 1fr; gap: 20px; }
 .trust-item { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 22px; }
