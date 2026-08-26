@@ -282,6 +282,10 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero--plumbing-fixtures { --hero-img: url('/assets/img/plumbing-fixtures-mobile.webp'); }
 @media (min-width: 1025px) { .hero--plumbing-fixtures { --hero-img: url('/assets/img/plumbing-fixtures-desktop.webp'); } }
 
+/* Town/area pages hero: reuses the homepage hero photos, same responsive pattern */
+.hero--town { --hero-img: url('/assets/img/hero-mobile.webp'); }
+@media (min-width: 1025px) { .hero--town { --hero-img: url('/assets/img/hero-desktop.webp'); } }
+
 /* ---------- Trust strip ---------- */
 .trust-strip { display: grid; grid-template-columns: 1fr; gap: 20px; }
 .trust-item { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 22px; }
