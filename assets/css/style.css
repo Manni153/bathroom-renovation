@@ -495,7 +495,15 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
 .divider { height: 1px; background: var(--border-soft); border: none; margin: 40px 0; }
 .two-col { display: grid; gap: 40px; grid-template-columns: 1fr; align-items: start; }
 .two-col > * { min-width: 0; }
-@media (min-width: 1025px) { .two-col { grid-template-columns: 1fr 380px; } }
+@media (min-width: 1025px) {
+  .two-col { grid-template-columns: 1fr 380px; }
+  /* The sidebar is much shorter than the main column on long-form pages
+     (city pages, service pages). Without this, once the sidebar's cards
+     run out the main column keeps flowing at its fixed 1fr width instead
+     of expanding, leaving the sidebar's former column empty for the rest
+     of the scroll. Sticky keeps it pinned in view instead. */
+  .two-col > aside { position: sticky; top: 96px; align-self: start; }
+}
 .side-card { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 24px; }
 .side-card h4 { font-size: 1rem; margin-bottom: 12px; }
 .side-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--ink-soft); }
