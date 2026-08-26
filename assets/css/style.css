@@ -442,7 +442,7 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
 .footer-bottom a { color: #A9AD97; }
 .footer-bottom a:hover { color: #fff; }
 
-/* ---------- Sticky mobile CTA ---------- */
+/* ---------- Sticky floating CTA (all breakpoints) ---------- */
 .sticky-cta {
   position: fixed; right: 16px; bottom: 16px; z-index: 200;
   display: flex; flex-direction: column; gap: 10px;
@@ -454,7 +454,6 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
 }
 .sticky-cta svg { width: 24px; height: 24px; }
 .sticky-cta .whatsapp { background: #25D366; } /* official WhatsApp green, intentionally not tied to --action */
-@media (min-width: 1025px) { .sticky-cta { display: none; } }
 
 /* ---------- Icon chip (custom line icons) ---------- */
 .icon-chip {
