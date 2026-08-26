@@ -252,6 +252,10 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 @media (min-width: 768px) { .hero--compact { padding: 48px 0 44px; } }
 @media (min-width: 1025px) { .hero--compact { padding: 64px 0 56px; } }
 
+/* Homepage hero: portrait-shot image on mobile/tablet, landscape on desktop */
+.hero--home { --hero-img: url('/assets/img/hero-mobile.webp'); }
+@media (min-width: 1025px) { .hero--home { --hero-img: url('/assets/img/hero-desktop.webp'); } }
+
 /* ---------- Trust strip ---------- */
 .trust-strip { display: grid; grid-template-columns: 1fr; gap: 20px; }
 .trust-item { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 22px; }
