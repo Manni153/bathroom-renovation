@@ -137,17 +137,14 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .brand {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: var(--ink);
   display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  white-space: nowrap;
+  align-items: center;
   flex-shrink: 0;
 }
-@media (min-width: 768px) { .brand { font-size: 1.3rem; } }
-.brand span { display: none; font-family: var(--font-sans); font-weight: 500; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-dark); margin-top: 2px; }
-@media (min-width: 768px) { .brand span { display: block; } }
+.brand-logo { height: 34px; width: auto; display: block; }
+@media (min-width: 768px) { .brand-logo { height: 44px; } }
 
 .nav-desktop { display: none; }
 .nav-desktop ul { display: flex; gap: 28px; list-style: none; }
