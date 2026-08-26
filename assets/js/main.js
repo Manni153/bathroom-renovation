@@ -18,4 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
       q.setAttribute('aria-expanded', item.classList.contains('is-open') ? 'true' : 'false');
     });
   });
+
+  // Desktop nav dropdowns ("Services", "Areas We Cover"): open instantly on
+  // hover, but close after a short delay so the menu doesn't flicker shut
+  // when the cursor briefly crosses the gap between the trigger and panel.
+  document.querySelectorAll('.nav-desktop .dropdown').forEach(function (dropdown) {
+    var closeTimer = null;
+    dropdown.addEventListener('mouseenter', function () {
+      clearTimeout(closeTimer);
+      dropdown.classList.add('is-open');
+    });
+    dropdown.addEventListener('mouseleave', function () {
+      closeTimer = setTimeout(function () {
+        dropdown.classList.remove('is-open');
+      }, 250);
+    });
+  });
 });
