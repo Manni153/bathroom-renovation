@@ -155,7 +155,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .nav-desktop .dropdown-menu {
   display: none;
   position: absolute;
-  top: 28px;
+  top: 100%;
   left: -12px;
   background: #fff;
   border: 1px solid var(--border-soft);
