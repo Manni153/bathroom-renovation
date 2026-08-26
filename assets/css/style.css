@@ -23,12 +23,14 @@
 
   --terracotta: #B96A45; /* used sparingly for star ratings / warmth accents only */
 
-  /* Dedicated CTA/action color — brick red, distinct from the olive
-     container palette above. Reserved for primary action buttons and
-     the floating WhatsApp icon only; never backgrounds, text, or
-     decorative elements. */
-  --action: #A13F2E;
-  --action-dark: #843426;
+  /* Dedicated CTA/action color — brick red/terracotta, distinct from
+     the olive container palette above. Reserved for primary action
+     buttons (Get a Quote, Call) and the header tap-to-call icon only;
+     never backgrounds, text, or decorative elements. Nudged slightly
+     darker than the requested #C45C26 to clear WCAG AA text contrast
+     (4.5:1) against white button labels. */
+  --action: #B8531F;
+  --action-dark: #974419;
 
   --radius-sm: 6px;
   --radius: 12px;
@@ -426,7 +428,7 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
   box-shadow: var(--shadow-lg); color: #fff;
 }
 .sticky-cta svg { width: 24px; height: 24px; }
-.sticky-cta .whatsapp { background: var(--action); }
+.sticky-cta .whatsapp { background: #25D366; } /* official WhatsApp green, intentionally not tied to --action */
 @media (min-width: 1025px) { .sticky-cta { display: none; } }
 
 /* ---------- Icon chip (custom line icons) ---------- */
