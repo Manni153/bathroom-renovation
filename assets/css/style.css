@@ -258,6 +258,10 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero--home { --hero-img: url('/assets/img/hero-mobile.webp'); }
 @media (min-width: 1025px) { .hero--home { --hero-img: url('/assets/img/hero-desktop.webp'); } }
 
+/* Full Bathroom Renovation service hero: same responsive pattern */
+.hero--full-renovation { --hero-img: url('/assets/img/full-renovation-mobile.webp'); }
+@media (min-width: 1025px) { .hero--full-renovation { --hero-img: url('/assets/img/full-renovation-desktop.webp'); } }
+
 /* ---------- Trust strip ---------- */
 .trust-strip { display: grid; grid-template-columns: 1fr; gap: 20px; }
 .trust-item { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 22px; }
