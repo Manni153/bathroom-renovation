@@ -20,18 +20,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Desktop nav dropdowns ("Services", "Areas We Cover"): open instantly on
-  // hover, but close after a short delay so the menu doesn't flicker shut
-  // when the cursor briefly crosses the gap between the trigger and panel.
+  // hover, close after a short delay on mouseleave so the menu doesn't
+  // flicker shut when the cursor briefly crosses the gap between the
+  // trigger and panel, and close immediately once an item is selected
+  // (CSS no longer opens on bare :hover, so this JS state is what keeps
+  // the menu visible while the mouse is still resting over it after a click).
   document.querySelectorAll('.nav-desktop .dropdown').forEach(function (dropdown) {
     var closeTimer = null;
+    function close() {
+      clearTimeout(closeTimer);
+      dropdown.classList.remove('is-open');
+    }
     dropdown.addEventListener('mouseenter', function () {
       clearTimeout(closeTimer);
       dropdown.classList.add('is-open');
     });
     dropdown.addEventListener('mouseleave', function () {
-      closeTimer = setTimeout(function () {
-        dropdown.classList.remove('is-open');
-      }, 250);
+      closeTimer = setTimeout(close, 250);
+    });
+    dropdown.querySelectorAll('.dropdown-menu a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        close();
+        // A clicked link keeps browser focus, which would otherwise hold the
+        // menu open via :focus-within (the keyboard-accessibility fallback).
+        link.blur();
+      });
     });
   });
 });

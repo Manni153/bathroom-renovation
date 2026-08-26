@@ -166,7 +166,6 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   gap: 2px;
   z-index: 50;
 }
-.nav-desktop .dropdown:hover .dropdown-menu,
 .nav-desktop .dropdown:focus-within .dropdown-menu,
 .nav-desktop .dropdown.is-open .dropdown-menu { display: flex; }
 .nav-desktop .dropdown-menu a { padding: 8px 10px; border-radius: var(--radius-sm); font-size: 0.9rem; }
