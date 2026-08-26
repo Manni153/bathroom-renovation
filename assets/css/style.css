@@ -228,17 +228,18 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   display: flex;
   align-items: center;
 }
-@media (min-width: 768px) { .hero { padding: 64px 0 64px; min-height: 0; display: block; } }
-@media (min-width: 1025px) {
-  /* Desktop header is taller (full nav + phone + Get a Quote), so the
-     hero again fills the remaining viewport before any scroll. */
+@media (min-width: 768px) {
+  /* Header height steps up from 63px to 78px exactly at this breakpoint
+     (nav padding increases) and stays 78px through desktop, so tablet
+     and desktop share the same viewport-fill offset here. */
   .hero {
-    padding: 96px 0 84px;
+    padding: 64px 0 64px;
     min-height: calc(100vh - 78px);
     min-height: calc(100dvh - 78px);
-    display: flex;
-    align-items: center;
   }
+}
+@media (min-width: 1025px) {
+  .hero { padding: 96px 0 84px; }
 }
 .hero__inner { max-width: 720px; width: 100%; }
 .hero .eyebrow { color: #E4E9D8; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55); }
@@ -250,9 +251,9 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero__trust { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; color: #E9E5D3; }
 .hero__trust span { display: inline-flex; align-items: center; gap: 6px; }
 
-.hero--compact { padding: 24px 0 28px; min-height: 0; display: block; }
-@media (min-width: 768px) { .hero--compact { padding: 48px 0 44px; } }
-@media (min-width: 1025px) { .hero--compact { padding: 64px 0 56px; } }
+/* .hero--compact intentionally removed: hero height now matches the
+   homepage hero (full remaining-viewport height at every breakpoint) on
+   every page that uses the class, via the base .hero rules above. */
 
 /* Homepage hero: portrait-shot image on mobile/tablet, landscape on desktop */
 .hero--home { --hero-img: url('/assets/img/hero-mobile.webp'); }
