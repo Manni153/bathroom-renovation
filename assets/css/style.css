@@ -23,6 +23,13 @@
 
   --terracotta: #B96A45; /* used sparingly for star ratings / warmth accents only */
 
+  /* Dedicated CTA/action color — brick red, distinct from the olive
+     container palette above. Reserved for primary action buttons and
+     the floating WhatsApp icon only; never backgrounds, text, or
+     decorative elements. */
+  --action: #A13F2E;
+  --action-dark: #843426;
+
   --radius-sm: 6px;
   --radius: 12px;
   --radius-lg: 20px;
@@ -97,8 +104,8 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   border: 1px solid transparent;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
-.btn-primary { background: var(--sage); color: #fff; box-shadow: var(--shadow-sm); }
-.btn-primary:hover { background: var(--sage-dark); box-shadow: var(--shadow); }
+.btn-primary { background: var(--action); color: #fff; box-shadow: var(--shadow-sm); }
+.btn-primary:hover { background: var(--action-dark); box-shadow: var(--shadow); }
 .btn-outline { background: transparent; border-color: var(--ink); color: var(--ink); }
 .btn-outline:hover { background: var(--ink); color: #fff; }
 .btn-light { background: #fff; color: var(--sage-darker); }
@@ -174,7 +181,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
   font-weight: 600; font-size: 0.85rem; color: var(--ink);
   flex-shrink: 0;
 }
-.header-phone-compact svg { width: 16px; height: 16px; color: var(--sage-dark); flex-shrink: 0; }
+.header-phone-compact svg { width: 16px; height: 16px; color: var(--action); flex-shrink: 0; }
 .header-quote-btn { display: none; }
 @media (min-width: 768px) {
   .header-phone-compact { display: none; }
@@ -413,7 +420,7 @@ table.compare td:first-child { color: var(--ink-soft); font-weight: 500; width: 
   box-shadow: var(--shadow-lg); color: #fff;
 }
 .sticky-cta svg { width: 24px; height: 24px; }
-.sticky-cta .whatsapp { background: var(--sage-darker); }
+.sticky-cta .whatsapp { background: var(--action); }
 @media (min-width: 1025px) { .sticky-cta { display: none; } }
 
 /* ---------- Icon chip (custom line icons) ---------- */
