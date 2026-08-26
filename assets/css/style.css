@@ -23,14 +23,13 @@
 
   --terracotta: #B96A45; /* used sparingly for star ratings / warmth accents only */
 
-  /* Dedicated CTA/action color — brick red/terracotta, distinct from
-     the olive container palette above. Reserved for primary action
-     buttons (Get a Quote, Call) and the header tap-to-call icon only;
-     never backgrounds, text, or decorative elements. Nudged slightly
-     darker than the requested #C45C26 to clear WCAG AA text contrast
-     (4.5:1) against white button labels. */
-  --action: #B8531F;
-  --action-dark: #974419;
+  /* Dedicated CTA/action color — brick red, distinct from the olive
+     container palette above. Reserved for primary action buttons
+     (Get a Quote, Call) and the header tap-to-call icon only; never
+     backgrounds, text, or decorative elements. Sampled exactly from
+     the approved "Olive Green & Brick Red" palette swatch. */
+  --action: #A94140;
+  --action-dark: #8B3534;
 
   --radius-sm: 6px;
   --radius: 12px;
@@ -114,6 +113,7 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .btn-light:hover { background: var(--sage-tint); }
 .btn-block { width: 100%; }
 .btn-sm { padding: 10px 18px; font-size: 0.9rem; }
+.btn--phone { font-size: 1.1rem; letter-spacing: 0.01em; padding: 16px 30px; }
 
 /* ---------- Header ---------- */
 .site-header {
