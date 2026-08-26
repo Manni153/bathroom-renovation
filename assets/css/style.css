@@ -274,6 +274,10 @@ h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
 .hero--tiling { --hero-img: url('/assets/img/bathroom-tiling-mobile.webp'); }
 @media (min-width: 1025px) { .hero--tiling { --hero-img: url('/assets/img/bathroom-tiling-desktop.webp'); } }
 
+/* Waterproofing service hero: same responsive pattern */
+.hero--waterproofing { --hero-img: url('/assets/img/waterproofing-mobile.webp'); }
+@media (min-width: 1025px) { .hero--waterproofing { --hero-img: url('/assets/img/waterproofing-desktop.webp'); } }
+
 /* ---------- Trust strip ---------- */
 .trust-strip { display: grid; grid-template-columns: 1fr; gap: 20px; }
 .trust-item { background: var(--surface); border: 1px solid var(--border-soft); border-radius: var(--radius); padding: 22px; }
